@@ -18,7 +18,7 @@ pipeline {
         }
 	stage('Checking log file for errors') {
 	    steps {
-		sh '''
+		sh '''#/bin/bash
 		echo "$SECRET_SUDO_PASS" |sudo -S cat /var/log/apache2/access.log | grep -E "\" (4[0-9]{2}|5[0-9]{2})"
 		'''
 }

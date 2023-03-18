@@ -4,11 +4,12 @@ pipeline {
     }
     
     stages {
-        stage('My-Pipeline') {
+        stage('Download apache') {
             steps {
                 echo 'Hello World'
                 sh '''
-                ls -l
+                echo "$SUDO_PASS"| sudo -S apt update
+		echo "$SUDO_PASS" |  sudo -S apt install apache2
                 '''
                 echo 'World Hello'
             }

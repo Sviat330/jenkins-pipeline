@@ -1,4 +1,0 @@
-.env
-.gitsecret/keys/random_seed
-!*.secret
-sudo_passwd.txt

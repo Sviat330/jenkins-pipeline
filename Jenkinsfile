@@ -19,7 +19,8 @@ pipeline {
 	stage('Checking log file for errors') {
 	    steps {
 		sh '''#/bin/bash
-		echo "$SECRET_SUDO_PASS" | sudo -S cat /var/log/apache2/access.log | grep 404
+echo $SHELL		
+echo "$SECRET_SUDO_PASS" | sudo -S cat /var/log/apache2/access.log | grep 404
 
 		'''
 }

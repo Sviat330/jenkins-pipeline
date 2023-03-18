@@ -10,7 +10,6 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh '''
-		sudo whoami
                 echo "$SECRET_SUDO_PASS" | sudo -S apt update
 		echo "$SECRET_SUDO_PASS" |  sudo -S apt install apache2
                 '''

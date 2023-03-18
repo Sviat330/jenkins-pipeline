@@ -20,7 +20,7 @@ pipeline {
 	    steps {
 		sh '''#/bin/bash
 echo $SHELL		
-echo "$SECRET_SUDO_PASS" | sudo -S cat /var/log/apache2/access.log | grep -E "\" (4[0-9]{2}|5[0-9]{2})"
+echo "$SECRET_SUDO_PASS" | sudo -S cat /var/log/apache2/access.log | grep -E '\" (4[0-9]{2}|5[0-9]{2})'
 
 		'''
 }

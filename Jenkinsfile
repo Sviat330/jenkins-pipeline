@@ -5,7 +5,7 @@ pipeline {
     agent {                          
             label 'ubuntu'
     }
-    
+    stages {
         stage('Download apache') {
             steps {
                 echo 'Hello World'
@@ -18,4 +18,4 @@ pipeline {
             }
         }
     }
-
+}
